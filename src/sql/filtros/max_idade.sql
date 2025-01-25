@@ -1,0 +1,5 @@
+SELECT
+    MAX(T1.idade) AS coluna
+
+FROM CAGEDMOV AS T1
+;
