@@ -1,5 +1,6 @@
 SELECT 
     T1.competênciamov AS 'competencia',
+    T1.saldomovimentação AS 'saldomovimentacao',
     T2.Descrição AS 'regiao',
     T3.Descrição AS 'uf',
     T4.Descrição AS 'municipio',
@@ -30,4 +31,8 @@ LEFT JOIN raçacor AS T10                ON T1.raçacor = T10.Código
 LEFT JOIN sexo AS T11                   ON T1.sexo = T11.Código
 LEFT JOIN tipomovimentação AS T14       ON T1.tipomovimentação = T14.Código
 LEFT JOIN tamestabjan AS T18            ON T1.tamestabjan = T18.Código
-LEFT JOIN unidadesaláriocódigo AS T23   ON T1.unidadesaláriocódigo = T23.Código;
+LEFT JOIN unidadesaláriocódigo AS T23   ON T1.unidadesaláriocódigo = T23.Código
+
+order by T1.competênciamov ASC
+;
+

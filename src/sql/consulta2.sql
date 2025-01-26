@@ -1,6 +1,7 @@
 SELECT 
-    T1.tipomovimentação,
-    T23.Descrição,
+    --T1.tipomovimentação,
+    T9.Código,
+    T9.Descrição,
     count(*)
     --*
 
@@ -28,12 +29,14 @@ LEFT JOIN origemdainformação AS T20     ON T1.origemdainformação = T20.Códi
 LEFT JOIN unidadesaláriocódigo AS T23   ON T1.unidadesaláriocódigo = T23.Código
 
 --where T9.Código IN (3,4,5,6)
+--where T1.salário == max(T1.salário)
 
-group by T1.unidadesaláriocódigo
+
+group by T1.graudeinstrução
 
 --order by count(*) DESC
 
-order by T1.unidadesaláriocódigo ASC
-
+--order by T1.graudeinstrução DESC
+order by T9.Código ASC
 ;
 
