@@ -39,6 +39,7 @@ def convert_df(df):
 
 if __name__ == "__main__":
     st.title("Análise do mercado atuarial pós pandemia")
+    st.write("Criado por: Gabriel Reiss de Castro MIBA 4120 https://www.linkedin.com/in/gabrielreissdecastro/")
     st.write("Os dados foram obtidos do Novo Caged, baixados do servidor FTP do MTPS: ftp://ftp.mtps.gov.br/pdet/microdados/. Os dados foram filtrados pelo CBO 211105 Atuário, foram realizados algumas limpezas sobre alguns dados divergentes e podem ser baixados no botão abaixo.")
     conn = load_db()
     
@@ -487,5 +488,5 @@ if __name__ == "__main__":
 
         #por tamanho de empresa
     
-    
+    st.write("Criado por: Gabriel Reiss de Castro MIBA 4120 https://www.linkedin.com/in/gabrielreissdecastro/")
     
