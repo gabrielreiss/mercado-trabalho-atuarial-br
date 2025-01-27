@@ -158,7 +158,7 @@ if __name__ == "__main__":
         
         df_admitidos_mensal = admitidos.resample('ME', on='competencia')['saldomovimentacao'].sum().reset_index()
         df_demissoes_mensal = demissoes.resample('ME', on='competencia')['saldomovimentacao'].sum().reset_index()
-        df_saldo_mensal = df.resample('M', on='competencia')['saldomovimentacao'].sum().reset_index()
+        df_saldo_mensal = df.resample('ME', on='competencia')['saldomovimentacao'].sum().reset_index()
 
         guias_titulo = ["Saldo", "Admitidos e Demitidos"]
         guia_saldo, guia_ad = st.tabs(guias_titulo)
