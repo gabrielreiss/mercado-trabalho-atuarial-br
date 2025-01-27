@@ -201,12 +201,12 @@ if __name__ == "__main__":
         
         a_media = sal_admitidos[sal_admitidos['competencia'] > sal_admitidos['competencia'].max() - pd.DateOffset(months=12)]['salario'].mean()
         a_mediana = sal_admitidos[sal_admitidos['competencia'] > sal_admitidos['competencia'].max() - pd.DateOffset(months=12)]['salario'].median()
-        st.write(f'O salário médio dos admitidos dos últimos 12 meses foi: R\$ {a_media:.2f} e a mediana foi R\$ {a_mediana:.2f}')
+        st.write(f'O salário médio dos admitidos dos últimos 12 meses foi: {a_media:.2f} e a mediana foi {a_mediana:.2f}')
         
         sal_demitidos = df.query('unidadesalarariocodigo == "Mês" and saldomovimentacao == -1')
         d_media = sal_demitidos[sal_demitidos['competencia'] > sal_demitidos['competencia'].max() - pd.DateOffset(months=12)]['salario'].mean()
         d_mediana = sal_demitidos[sal_demitidos['competencia'] > sal_demitidos['competencia'].max() - pd.DateOffset(months=12)]['salario'].median()
-        st.write(f'O salário médio dos demitidos dos últimos 12 meses foi: R\$ {d_media:.2f} e a mediana foi R\$ {d_mediana:.2f}')
+        st.write(f'O salário médio dos demitidos dos últimos 12 meses foi: {d_media:.2f} e a mediana foi {d_mediana:.2f}')
         st.write(f'Os admitidos receberam um salário médio {((a_media / d_media - 1) * 100):.2f}% em relação aos demitidos')
         st.write(f'Os admitidos receberam um salário mediano {((a_mediana / d_mediana - 1) * 100):.2f}% em relação aos demitidos')
         del(d_media);del(d_mediana);del(a_media);del(a_mediana)
